@@ -119,3 +119,36 @@ for(var i = 0; i < arr.length;i++){
         console.log(arr[i]);
     }
 }
+
+// 1 
+var most = [1,2,3,4,5,6,7,8,9,10]
+for(var i = 0; i <most.length;i++){
+    console.log(most[i])
+}
+
+//2 
+for(var i = 0;i<most.length;i++){
+    console.log(most[i] + 2)
+}
+//3
+var sum2 = 0
+for(var i = 0;i<most.length;i++){
+sum2 += most[i]
+}
+
+console.log(sum2)
+
+//4
+
+for(var i = 0;i<most.length;i++){
+    if(most[i] % 2 ==0){
+        console.log(most[i]);
+    }
+}
+
+// 5
+for(var i = 0;i<most.length;i++){
+    if(most[i] % 2 ==1){
+        console.log(most[i]);
+    }
+}
