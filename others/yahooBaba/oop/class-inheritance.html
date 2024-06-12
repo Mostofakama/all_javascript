@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class Inheritance</title>
+</head>
+<body>
+    <script>
+        //1
+        // class employee{
+        //     constructor(name){
+        //         console.log('constructor: Employee ' + name);
+        //     }
+
+        // }
+
+// class maneger extends employee{
+//     constructor(name){
+//         super()
+//                 console.log('constructor: maneger '+ name);
+//             }
+// }
+
+// let x = new maneger('mostofa')
+
+
+
+//2
+class employee{
+            constructor(name,age,salary){
+                this.empName = name
+                this.empage = age 
+                this.salary = salary
+                // console.log('constructor: Employee ');
+            }
+            info(){
+                // console.log(`Employee Name:${this.empName}`)
+                document.write(`<h2>Empoyee Detils</h2>
+                name:${this.empName} <br>
+                age : ${this.empage} <br>
+                salary: ${this.salary}                
+                `)
+
+            }
+
+        }
+class maneger extends employee{
+    info(){
+        let ta = 1000
+        let phone  = 3000;
+        let totalsalary = this.salary + ta +phone
+                // console.log(`Employee Name:${this.empName}`)
+                document.write(`<h2>Maneger Detils</h2>
+                name:${this.empName} <br>
+                age : ${this.empage} <br>
+                salary: ${totalsalary}                
+                `)
+
+            }
+            // info(){
+            //     super.info()//employee ar kono method ay khane call korar jono super.info use korte hoy first a ata cholbe tar por nicer ta cholbe 
+
+            //     console.log(`Employee Name:${this.empName}`)
+            // }
+
+          
+
+}
+
+class test extends maneger{
+
+}
+        let x = new test('mostofa kamal',23,5000000)
+        x.info()
+    </script>
+</body>
+</html>

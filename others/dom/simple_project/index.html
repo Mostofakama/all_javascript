@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #passwordOutput {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Password Generator</h1>
+    <label for="lengthInput">Password Length:</label>
+    <input type="number" id="lengthInput" min="1" max="128" value="12">
+    <button id="generateButton">Generate Password</button>
+    <div id="passwordOutput" class="hidden"></div>
+
+    <script src="js/all_function.js"></script>
+</body>
+</html>

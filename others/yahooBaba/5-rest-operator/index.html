@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    <script>
+        // function sum(){
+        //     console.log(arguments);
+        //     let sum = 0
+        //     for(let i in arguments){
+        //         sum += arguments[i]
+        //     }
+        //     document.write(sum + '</br>')
+        // }
+        // practic 1
+        //  function sum(name,email, ...args){
+        //     var sum =0
+        //     for(let i in args){
+        //        sum += args[i]
+
+        //     }
+        //      document.write(sum + "<br>")
+        //      document.write(name + "<br>")
+        //      document.write(email + "<br>")
+
+        // }
+        // var a= 30
+        // var b = 300
+        // sum("mostofa","mostofa@gmial,com",a,b)
+        // sum("kamla","kamal@gmail.com",20,10,2324)
+
+
+
+        // practic 2
+
+
+        // function sum(name,email,...marks){
+        //    let sum = 0
+        //     for(let i in marks){
+        //         sum +=marks[i]
+        //     }
+        //     document.write(sum + "<br>")
+        //     document.write(name + "<br>")
+        //     document.write(email + "<br>")
+        // }
+        // sum('mostofa','mostofa@gmail.com',34,35,3223)
+// practic 3
+function valie (name , ...ars ){
+    for(let i in ars){
+        document.write(ars[i]+'<br>');
+        document.write(name);
+    }
+}
+valie("mostofa",2,34,3,5,6,3,432)
+
+    </script>
+</body>
+</html>3

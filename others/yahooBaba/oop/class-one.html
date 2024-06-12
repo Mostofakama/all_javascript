@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop int</title>
+</head>
+<body>
+    <script>
+       // 1
+        class hello{
+        
+            message(name){
+                console.log(`hello ${name}`);
+            }
+        }
+
+        let a = new hello()
+        a.message("Mostofa")
+       let b = new hello()
+       b.message("kamal")
+
+       class sumsub {
+        //constructor method
+           constructor(name,age){
+           this.name = name;
+           this.myage = age;
+
+            console.log('constructor function');
+           }
+           //prototype method
+           hello(){
+            console.log(`hello ${this.name}. your age is ${this.myage}`);
+           }
+           //static method
+
+           static staticMethod(){
+            console.log("static function");
+           }
+       }
+
+    let m = new sumsub("moo",23)
+    let n = new sumsub("hrrr",25)
+    // static function declaration 
+    sumsub.staticMethod()
+    m.hello() 
+    n.hello()
+
+        //2 es6
+        // class xname{
+        //     constructor(name,age){
+        //         this.name = name
+        //         this.age = age
+        //         //console.log(`my name is Mostofa`);
+        //     }
+        //     greet(){
+        //         console.log(`my name is ${this.name} . my age is ${this.age}`);
+        //     }
+
+        // }
+
+        // let y = new xname('mostofa',34)
+        // y.greet()
+
+       
+    </script>
+
+
+</body>
+</html>

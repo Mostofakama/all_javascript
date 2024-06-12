@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+</head>
+<body>
+    <script>
+        // 1
+        // old 
+        // let name = "mostofa"
+        // let obj  ={
+        //     name :name
+        // }
+
+        // // new 
+        // let name1 = "kamal"
+        // let ob = {
+        //     name1
+        // }
+
+// 2
+let n = "student"
+// var obj = {
+//     [n] : "yahoo baba"
+// }
+// var obj = {
+//     [n + "name"] : "yahoo baba"
+// }
+// var obj = {
+//     [n + "name"] : "yahoo baba",
+//     date:function(){
+//       console.log(`my name is ${this.studentname}`);
+//     }
+// }
+
+// console.log(obj);
+// console.log(obj.date());
+
+// 3
+let obj = {
+    name:"yahoo Baba",
+    show(){
+        console.log(this.name);
+    }
+}
+var x = obj.show()
+
+    </script>
+</body>
+</html>

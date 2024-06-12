@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        function sum (name,...args){
+            let sum = 0
+            document.write(name + "<br>")
+            for(let i in args){
+                sum += args[i]
+            }
+            document.write(sum)
+        }
+var arr = [20,10,30]
+        sum('mostofa',...arr)
+
+
+
+        // 2 tow array concate
+        var x = [1,2,4,3,5,6,7,8]
+        var  y = [9,10]
+
+        var z = [...x,...y]
+        console.log(z);
+
+        // 3
+        var a = {
+            name:"mostofa",
+            age:20
+        }
+        var b = {
+            city:"lalmonirhat"
+        }
+
+        var c ={...a,...b}
+        console.log(c);
+    </script>
+</body>
+</html>

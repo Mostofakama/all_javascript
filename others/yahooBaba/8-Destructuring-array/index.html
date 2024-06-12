@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuing Array</title>
+</head>
+<body>
+    <script>
+        // old
+        // let user = ["yahoo baba" , 23]
+        // let name = user[0]
+        // let age = user[1]
+        // console.log(name,age);
+
+        // new 
+        
+        let user = ["ushoo",43]
+        let [name,age]= user 
+        console.log(name,age);
+
+        let user1 = ["mostofa",23,['male',30000]]
+let [name1,age1,[gender,salary]] = user1
+console.log(name1,age1,gender,salary);
+               
+
+
+function person(){
+    return ['user',33,'dhily']
+}
+let [name2,age2,city] = person()
+
+console.log(name2,age2,city  );
+    </script>
+</body>
+</html>
