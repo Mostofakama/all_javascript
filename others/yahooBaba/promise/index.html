@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      /* #demo{
+        color:green;
+        font-size:30px ;
+        width:500px;
+        height:200px;
+        position: absolute;
+        display:none;
+        left: 0%;
+        right:0%;
+        top:0%;
+        bottom:0%;
+        margin:auto auto;
+        text-align: center;
+        background-color: aqua;
+        border-radius: 5px;
+        
+        
+
+
+      } */
+       #userTable{
+        display: none;
+       }
+    </style>
+</head>
+<body>
+  <p id="demo"></p>
+  <table id="userTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be inserted here -->
+        </tbody>
+    </table>
+     <input type="text" id="name">
+
+    <h3 id="hello">hello</h3>
+    <script>
+
+      // var name  = document.querySelector('#name').value
+      // console.log(name);
+      // var hell1 = document.querySelector('#hello')
+      // console.log(hell1);
+      // setTimeout(() => {
+      //   var mostofa = "Mostofa kamal"
+      //   var hello = document.getElementById('hello')
+      //   console.log(hello);
+      //   hello.innerText = hello.innerText + ' ' + mostofa +' ' + name 
+        
+      // }, 3000);
+        // 1 system 
+        // let i = true;
+        // let prom = new Promise(function(resolve,  reject){
+        //     if(i){
+        //         resolve("i am successfull.")
+        //     }else{
+        //         reject("i am failed.")
+        //     }
+
+        // })
+        // console.log(prom);
+
+          // 2 system 
+
+          // function prom(compalte){
+          //  return  new Promise(function(resolve,reject){
+          //   console.log("Fetchind data , please wait.");
+          //   let demo  = document.querySelector("#demo")
+          //   setTimeout(() => {
+              
+          //   if(compalte()){
+          //     resolve(
+//                [ demo.innerHTML = "i am successfull.",
+//                 demo.style.display = "flex",
+//                 demo.style.display = "block",
+// ]
+
+          //     'I am successfull.'
+          //     )
+          //   }else{
+          //     reject("i am Faild.")
+          //   }
+          //   }, 1000);
+
+          //  })
+          // }
+
+          // let onfullfulment = (result)=>{
+          //   console.log(result);
+          // }
+
+          // let onReject = (error)=>{
+          //   console.log(error);
+          // }
+
+          // prom(()=>{
+          //   return true
+          // }).then(onfullfulment)
+          // prom(true).catch(onReject)
+
+          // prom(()=>{
+          //   return true
+          // }).then(onfullfulment).catch(onReject)
+
+
+          // system 3
+          //   function prom(a,b){
+          //   var c = a / b
+          //   return new Promise((resolve,reject)=>{
+          //     console.log("wait for calculate");
+          //     setTimeout(() => {
+          //       if(a,b){
+          //       resolve(`Your answer: ${c}`)
+          //     }else{
+          //       reject("Faild calculat")
+          //     }
+          //     }, 2000);
+          //   })
+
+          // }
+
+          // let onfullfulment = (result)=>{
+          //   console.log(result);
+
+          // }
+
+          // let onReject = (error)=>{
+          //   console.log(error);
+          // }
+
+          // prom(8,3).then(onfullfulment).catch(onReject)
+
+
+        	
+
+// system 4 
+
+function prom(){
+  return new Promise((resolve,reject)=>{
+    console.log("Fetching data , pease wait.");
+    setTimeout(() => {
+      $.get("https://jsonplaceholder.typicode.com/users",function(data){
+        var ids =   document.getElementById("ids")
+        var tableBody = document.getElementById("userTable").getElementsByTagName('tbody')[0]
+       document.getElementById("userTable").style.display = "block";
+        data.forEach(user => {
+                const row = tableBody.insertRow();
+
+                const cellId = row.insertCell(0);
+                const cellName = row.insertCell(1);
+                const cellEmail = row.insertCell(2);
+                const cellAge = row.insertCell(3);
+
+                cellId.textContent = user.id;
+                cellName.textContent = user.name;
+                cellEmail.textContent = user.email;
+                cellAge.textContent = user.age;
+               
+            });
+
+             
+        // console.log(lol);
+     
+    })
+    }, 2000);
+
+
+  })
+}
+let onfullfulment = function(result){
+  console.log(result);
+}
+let onReject = function(error){
+  console.log(error);
+}
+
+prom().then(onfullfulment).catch(onReject)
+    </script>
+</body>
+</html>
